@@ -3,7 +3,7 @@ meteor depend-on package [![Build Status](https://travis-ci.org/Nemo64/meteor-de
 This tiny package contains some utility functions that will help you create reactive
 dependencies on things that natively do not support it, like dom/jquery events.
 
-dependOn.event(eventType, elements)
+DependOn.event(eventType, elements)
 -----------------------------------
 This method allows to easily create a dependency on a dom event.
 
@@ -13,20 +13,28 @@ A perfect example is the resize event of the browser:
 Template.myTemplate.helpers({
 
   windowHeight: function () {
-    dependOn.event('resize', window);
+    DependOn.event('resize', window);
     return $(window).height();
     // this helper now reactively returns the window height
   },
   
   scrollTop: function () {
-    dependOn.event('scroll', document);
+    DependOn.event('scroll', document);
     return $(document).scrollTop();
     // this helper reactively returns the scrollTop of the document
-  }
+  },
+  
+  windowHasFocus: function () {
+    DependOn.event('focus blur', window);
+    return document.hasFocus();
+    // tells if the window is currently active
+  },
+  
+  // there are a ton of more usefull examples, feel free to add some ;)
 });
 ```
 
-dependOn.animationFrame()
+DependOn.animationFrame()
 -------------------------
 This method is usefull to update information depending with the refresh rate
 of the screen. This is most usefull for animations which depend on time.
@@ -38,17 +46,17 @@ Template.myTemplate.helpers({
   // these helpers all return the rotation in degrees and are reactive.
 
   secondHand: function () {
-    dependOn.animationFrame();
+    DependOn.animationFrame();
     return $.now() / 1000 / 60 % 1 * 360;
   },
   
   minuteHand: function () {
-    dependOn.animationFrame();
+    DependOn.animationFrame();
     return $.now() / 1000 / 60 / 60 % 1 * 360;
   },
   
   hourHand: function () {
-    dependOn.animationFrame();
+    DependOn.animationFrame();
     return $.now() / 1000 / 60 / 60 / 24 % 1 * 360;
   },
 });
