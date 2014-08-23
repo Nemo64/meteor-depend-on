@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "meteor dependency utilities",
+  summary: "Utilities to create dependencies on events and other things.",
   version: "1.0.0",
   githubUrl: "https://github.com/Nemo64/meteor-depend-on.git"
 });
