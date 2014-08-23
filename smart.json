@@ -1,7 +1,7 @@
 {
   "name": "depend-on",
   "description": "helper to create dependencies on events and other things.",
-  "homepage": "https://github.com/Nemo64/meteor-query-builder",
+  "homepage": "https://github.com/Nemo64/meteor-depend-on",
   "author": "Marco Pfeiffer <m4pfeiffer+github@yahoo.de>",
   "version": "1.0.0",
   "git": "https://github.com/Nemo64/meteor-depend-on.git",
