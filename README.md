@@ -10,10 +10,18 @@ This method allows to easily create a dependency on a dom event.
 A perfect example is the resize event of the browser:
 
 ```JavaScript
-Deps.autorun(function () {
-  dependOn.event('resize', window);
-  var height = $(window).height();
-  // do something with height
+Template.myTemplate.helpers({
+
+  windowHeight: function () {
+    dependOn.event('resize', window);
+    return $(window).height();
+    // this helper now reactively returns the window height
+  },
+  
+  scrollTop: function () {
+    dependOn.event('scroll', document);
+    return $(document).scrollTop();
+    // this helper reactively returns the scrollTop of the document
+  }
 });
 ```
-
