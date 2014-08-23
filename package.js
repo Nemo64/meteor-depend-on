@@ -15,7 +15,8 @@ Package.on_use(function(api) {
     'src/dependOn.js'
   ]);
   api.add_files([
-    'src/event.js'
+    'src/event.js',
+    'src/animationFrame.js'
   ], 'client');
   
   api.export(['dependOn']);
@@ -25,6 +26,7 @@ Package.on_test(function (api) {
   api.use(['depend-on', 'tinytest', 'test-helpers', 'jquery']);
   api.add_files([]);
   api.add_files([
-    'src/event-test.js'
+    'src/event-test.js',
+    'src/animationFrame-test.js'
   ], 'client');
 });
