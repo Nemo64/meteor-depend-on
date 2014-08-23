@@ -1,7 +1,7 @@
 meteor depend-on package [![Build Status](https://travis-ci.org/Nemo64/meteor-depend-on.svg?branch=master)](https://travis-ci.org/Nemo64/meteor-depend-on)
 ========================
-This tiny package contains some functione that will help you create reactive
-dependencies on things that natively do not support that.
+This tiny package contains some utility functions that will help you create reactive
+dependencies on things that natively do not support it, like dom/jquery events.
 
 dependOn.event(eventType, elements)
 -----------------------------------
