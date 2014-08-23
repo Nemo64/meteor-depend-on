@@ -1,6 +1,6 @@
 Package.describe({
   summary: "meteor dependency utilities",
-  version: "0.0.0",
+  version: "1.0.0",
   githubUrl: "https://github.com/Nemo64/meteor-depend-on.git"
 });
 
