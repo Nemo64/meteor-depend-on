@@ -1,11 +1,11 @@
-Tinytest.add("dependOn - animationFrame - basic", function (test) {
+Tinytest.add("DependOn - animationFrame - basic", function (test) {
   
   var autorunCalls = 0;
   Deps.autorun(function () {
     autorunCalls++;
     
     if (autorunCalls < 3) {
-      dependOn.animationFrame();
+      DependOn.animationFrame();
     }
   });
   
@@ -29,14 +29,14 @@ Tinytest.add("dependOn - animationFrame - basic", function (test) {
   // the animation should now be gone!
 });
 
-Tinytest.add("dependOn - animationFrame - multiple", function (test) {
+Tinytest.add("DependOn - animationFrame - multiple", function (test) {
   
   var autorunCalls = 0;
   Deps.autorun(function () {
     autorunCalls++;
     
     if (autorunCalls < 4) {
-      dependOn.animationFrame();
+      DependOn.animationFrame();
     }
   });
   
@@ -44,7 +44,7 @@ Tinytest.add("dependOn - animationFrame - multiple", function (test) {
     autorunCalls++;
     
     if (autorunCalls < 3) {
-      dependOn.animationFrame();
+      DependOn.animationFrame();
     }
   });
   

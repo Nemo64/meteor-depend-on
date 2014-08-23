@@ -81,7 +81,7 @@ var removeDependency = function (dependency) {
 // and: https://github.com/jquery/jquery/blob/2.1.1/src/event.js#L81
 var rnotwhite = /\S+/g;
 
-dependOn.event = function (eventTypes, elements) {
+DependOn.event = function (eventTypes, elements) {
   eventTypes = (eventTypes || '').match(rnotwhite) || [];
   _.each($(elements), function (element) {
     _.each(eventTypes, function (eventType) {

@@ -19,7 +19,7 @@ Package.on_use(function(api) {
     'src/animationFrame.js'
   ], 'client');
   
-  api.export(['dependOn']);
+  api.export(['DependOn']);
 });
 
 Package.on_test(function (api) {

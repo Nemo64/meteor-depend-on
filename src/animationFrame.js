@@ -13,7 +13,7 @@ var timer = function () {
   return timerAttached = dependency.hasDependents();
 };
 
-dependOn.animationFrame = function () {
+DependOn.animationFrame = function () {
   dependency.depend();
   
   if (! timerAttached) {
