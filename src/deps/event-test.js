@@ -1,4 +1,4 @@
-Tinytest.add("utx - dependOn - single element and event", function (test) {
+Tinytest.add("dependOn - event - single element and event", function (test) {
   var element = document.createElement('div');
   
   var autorunCalls = 0;
@@ -6,7 +6,7 @@ Tinytest.add("utx - dependOn - single element and event", function (test) {
     autorunCalls++;
     
     if (autorunCalls < 3) {
-      utx.dependOn(element, 'click');
+      dependOn.event('click', element);
     }
   });
   
@@ -21,7 +21,7 @@ Tinytest.add("utx - dependOn - single element and event", function (test) {
 });
 
 
-Tinytest.add("utx - dependOn - multiple elements and events", function (test) {
+Tinytest.add("dependOn - event - multiple elements and events", function (test) {
   var element1 = document.createElement('div');
   var element2 = document.createElement('div');
   var elements = [element1, element2];
@@ -31,9 +31,9 @@ Tinytest.add("utx - dependOn - multiple elements and events", function (test) {
     autorunCalls++;
     
     if (autorunCalls < 5) {
-      utx.dependOn(elements, 'click keydown');
+      dependOn.event('click keydown', elements);
     } else if (autorunCalls < 7) {
-      utx.dependOn(element2, 'click');
+      dependOn.event('click', element2);
     }
   });
   

@@ -1,7 +1,7 @@
 Package.describe({
-  summary: "meteor utility belt",
+  summary: "meteor dependency utilities",
   version: "0.0.0",
-  githubUrl: "https://github.com/Nemo64/meteor-utx.git"
+  githubUrl: "https://github.com/Nemo64/meteor-depend-on.git"
 });
 
 Package.on_use(function(api) {
@@ -12,19 +12,19 @@ Package.on_use(function(api) {
   ]);
 
   api.add_files([
-    'src/utx.js',
+    'src/dependOn.js',
   ]);
   api.add_files([
-    'src/deps/dependOn.js'
+    'src/deps/event.js'
   ], 'client');
   
-  api.export(['utx']);
+  api.export(['dependOn']);
 });
 
 Package.on_test(function (api) {
-  api.use(['utx', 'tinytest', 'test-helpers', 'jquery']);
+  api.use(['depend-on', 'tinytest', 'test-helpers', 'jquery']);
   api.add_files([]);
   api.add_files([
-    'src/deps/dependOn-test.js'
+    'src/deps/event-test.js'
   ], 'client');
 });

@@ -21,7 +21,7 @@ var dependencies = {};
  * @param {Element} element
  * @param {string}  eventType
  */
-var dependOnSingle = function (element, eventType) {
+var dependOnEvent = function (eventType, element) {
   var eventDependencies = dependencies[eventType];
   if (eventDependencies == null) {
     eventDependencies = dependencies[eventType] = [];
@@ -81,11 +81,11 @@ var removeDependency = function (dependency) {
 // and: https://github.com/jquery/jquery/blob/2.1.1/src/event.js#L81
 var rnotwhite = /\S+/g;
 
-utx.dependOn = function (elements, eventTypes) {
+dependOn.event = function (eventTypes, elements) {
   eventTypes = (eventTypes || '').match(rnotwhite) || [];
   _.each($(elements), function (element) {
     _.each(eventTypes, function (eventType) {
-      dependOnSingle(element, eventType);
+      dependOnEvent(eventType, element);
     });
   });
 };
