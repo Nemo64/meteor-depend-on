@@ -12,10 +12,10 @@ Package.on_use(function(api) {
   ]);
 
   api.add_files([
-    'src/dependOn.js',
+    'src/dependOn.js'
   ]);
   api.add_files([
-    'src/deps/event.js'
+    'src/event.js'
   ], 'client');
   
   api.export(['dependOn']);
@@ -25,6 +25,6 @@ Package.on_test(function (api) {
   api.use(['depend-on', 'tinytest', 'test-helpers', 'jquery']);
   api.add_files([]);
   api.add_files([
-    'src/deps/event-test.js'
+    'src/event-test.js'
   ], 'client');
 });
