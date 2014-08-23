@@ -3,6 +3,17 @@ meteor depend-on package [![Build Status](https://travis-ci.org/Nemo64/meteor-de
 This tiny package contains some utility functions that will help you create reactive
 dependencies on things that natively do not support it, like dom/jquery events.
 
+Installation
+------------
+With meteor >= 0.9
+```
+meteor add nemo64:depend-on
+```
+With meteor < 0.9 and meteorite
+```
+mrt add depend-on
+```
+
 DependOn.event(eventType, elements)
 -----------------------------------
 This method allows to easily create a dependency on a dom event.
