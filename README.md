@@ -39,17 +39,17 @@ Template.myTemplate.helpers({
 
   secondHand: function () {
     dependOn.animationFrame();
-    return $.now() / 1000 * 360;
+    return $.now() / 1000 / 60 % 1 * 360;
   },
   
   minuteHand: function () {
     dependOn.animationFrame();
-    return $.now() / 1000 / 60 * 360;
+    return $.now() / 1000 / 60 / 60 % 1 * 360;
   },
   
   hourHand: function () {
     dependOn.animationFrame();
-    return $.now() / 1000 / 60 / 60 * 360;
+    return $.now() / 1000 / 60 / 60 / 24 % 1 * 360;
   },
 });
 ```
